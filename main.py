@@ -145,6 +145,309 @@ def arithmetic_operations():
 
 def conditions():
 
+    is_hot = False
+    is_cold = False
+
+    if is_hot:
+        print("It's a hot day")
+        print ("Drink plenty of water")
+    elif is_cold:
+        print("It's a cold day")
+        print ("Wear warm clothes")
+    else:
+        print ("It's a lovely day")
+    
+
+    A = False
+    B = False
+    if A and B:
+        print("AND-> True")
+    else:
+        print("AND-> False")
+
+    A = False
+    B = False
+    if A & B:
+        print("AND-> True")
+    else:
+        print("AND-> False")
+
+    
+
+    A = False
+    B = False
+    if A or B:
+        print("OR-> True")
+    else:
+        print("OR-> False")
+
+    A = False
+    B = False
+    if A | B:
+        print("OR-> True")
+    else:
+        print("OR-> False")
+
+    A = False
+    if not A:
+        print("NOT-> True")
+    else:
+        print("NOT-> False")
+
+    A = False
+    if ~A:
+        print("NOT-> True")
+    else:
+        print("NOT-> False")
+
+
+    a = True
+    b = False
+
+    # Finding XOR of boolean values using ^ operator
+    p = a ^ a
+    q = a ^ b
+    r = b ^ a
+    s = b ^ b
+
+    # Printing the XOR value of every boolean combination
+    print(a, "XOR", a, "=", p)
+    print(a, "XOR", b, "=", q)
+    print(b, "XOR", a, "=", r)
+    print(b, "XOR", b, "=", s)
+
+    # == for equality
+    # >= greater than
+    # >  greater
+    # <= less than
+    # <  less
+
+
+def loops():
+    i = 1
+    while i <= 5:
+        print('*' * i)
+        i += 1
+
+    for x in range(1,6):
+        print('*' * x)
+
+
+def try_your_luck():
+    secret_number = 9
+    guess_count = 0
+    guess_limit = 3
+
+    while guess_count < guess_limit:
+        guess = int (input( 'Guess: '))
+        guess_count += 1
+        if guess == secret_number:
+            print ( "You won!")
+            break
+    else:
+        print('Sorry, you failed!!')
+
+def lists():
+    var_str = "python"
+    for x in var_str:
+        print(x)
+
+    list_name = ["Mosh","John","Sarah", "Mary", "Hesam", "Amanda"]
+    for x in list_name:
+        print(x)
+
+    print(list_name[3])
+    print(list_name[-1])
+    print(list_name[2:3])
+    
+    for x in [1,2,3,4,5,6]:
+        print(x)
+
+    for x in range(1,6,2):
+        print(x)
+    
+    total = 0
+    prices = [10,20,30]
+    for x in prices:
+        total += x
+    print(f"Total:{total}") 
+
+    for x in range (4):
+        for y in range(3):
+            print (f"({x}, {y})")
+
+    matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+    print(matrix[0][1])
+
+    for row in matrix:
+        for clm in row:
+            print(clm)
+
+    numbers = [5,6,3,7,10, 5, 7]
+    numbers.append(312)
+    print(numbers) 
+
+    numbers.insert(0,221)
+    print(numbers) 
+
+    
+    numbers.remove(5)
+    print(numbers)
+
+    numbers.remove(5)
+    print(numbers)
+
+    #numbers.remove(5)
+    #print(numbers)
+
+    tmp = numbers.pop()
+    print(tmp)
+    print(numbers)
+
+    tmp = numbers.index(7)
+    print(tmp)
+
+    #tmp = numbers.index(74)
+    #print(tmp)
+
+    print(50 in numbers)
+
+    print(numbers.count(7))
+
+    numbers.sort()
+    print(numbers)
+
+    numbers.reverse()
+    print(numbers)
+
+    numbers_A = numbers
+    numbers_B = numbers.copy()
+
+    numbers[0] = 1000
+    print(numbers)
+    print(numbers_A)
+    print(numbers_B)
+
+    matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+
+    import copy
+    matrix_A = matrix
+    matrix_B = matrix.copy()
+    matrix_C = copy.deepcopy(matrix)
+    matrix[0][0] = 1000
+
+    print(matrix)
+    print(matrix_A)
+    print(matrix_B)
+    print(matrix_C)
+
+    matrix_B.append([5,5,5])
+    print(matrix)
+    print(matrix_A)
+    print(matrix_B)
+    print(matrix_C)
+
+
+def find_uniques():
+    numbers = 12, 2, 4, 6, 3, 4, 6, 11
+    uniques = []
+    for number in numbers:
+        if number not in uniques:
+            uniques .append (number)
+    print (uniques)
+
+def List_Set_Dictionary_Tuple():
+    text = "Hello World!"
+    print(list(text))
+    print(set(text))
+
+    list_a = list(text)
+    set_a = set(text)
+    print(list_a[:2])
+    #print(set_a[:2])
+
+
+    list_a = [1,2,3,4]
+    list_a.append(5)
+    print(list_a)
+    
+    tuple_a = (1,2,3,4)
+    #tuple_a.append(5)
+    
+
+    tuple_a = ([1,3], 'a', 'b', 8)
+    tuple_a[0][0] = 99
+    print(tuple_a)
+
+
+    list_a = ['a','b',3,6]
+    list_a.remove('a')
+    print(list_a)
+    
+    set_a = {'a','b',3,6}
+    set_a.remove('a')
+    print(set_a)
+
+    a = {1,2,3}
+    #a.remove(5)
+
+    a = {1,2,3}
+    a.discard(5)
+    print(a)
+
+    list_a = ['a','b',3,6,4]
+    item = list_a.pop()
+    print(list_a)
+    print(item)
+
+    
+    set_a =  {'a','b',3, 6, 4}
+    item2 = set_a.pop()
+    print(set_a)
+    print(item2)
+
+    a = [1,2,3]
+    a.append(4)
+    print(a)
+
+    b = {1,2,3}
+    b.add(4)
+    print(b)
+
+    a = {1,2,3,4}
+    b = {1,5,6}
+    print(a.union(b))
+    
+    a = {'x', 1, 4}
+    b = [3, 4, 1]
+    c = ('x', 'y', 'z')
+    a.update(b,c)
+    print(a)
+
+
+    print("=============")
+    s = {'H', 'I', 'J', 'K', 1,2,3}
+    t = { 'o', 'p', 'e', 'n', 1,2,3}
+
+    print(s - t)
+    print(s)
+    print(s.difference(t))
+    print(s)
+
+    #s & t 
+    #s.intersection(t)
+
+    #s | t
+    #s.union(t)
+    print("=============")
 
     
 
@@ -163,6 +466,12 @@ if __name__ == "__main__":
     #working_with_str_with_function()
     #funstions_in_str()
     #arithmetic_operations()
-    conditions()
+    #conditions()
+    #loops()
+    #try_your_luck()
+    #lists()
+    List_Set_Dictionary_Tuple()
+
+
 
 
