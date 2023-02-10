@@ -91,11 +91,64 @@ def working_with_str_with_function():
 def funstions_in_str():
     course = 'Python for beginners with Pycharm'
     print(course)
-    print(course.replace ('beginners', 'advance class'))
+
+    print(course.replace('beginners', 'advance class'))
     print(course)
 
-    print(course.replace ('Py', 'py'))
+    print(course.replace('Py', 'py'))
     print(course)
+
+    #course.upper()
+    #course.upper ()
+    #course.lower ()
+    #course.title()
+    #course.find()
+    #course.replace()
+    if 'for' in course:
+        print("True")
+    else:
+        print("False")
+
+
+def arithmetic_operations():
+    A = 10
+    print(A/3)
+    print(A//3)
+    print(A%3)
+    print(A**2)
+    A += 2
+    A -= 5
+    print(A)
+
+    B = 2.9
+    C = round(2.9)
+    print(C)
+
+
+    B = -2.9
+    C = abs(2.9)
+    print(C)
+
+    import math
+
+    B = 2.9
+    C = math.ceil(2.9)
+    print(C)
+
+    B = 2.9
+    C = math.floor(2.9)
+    print(C)
+
+    #https://docs.python.org/3/library/math.html
+
+
+
+def conditions():
+
+
+    
+
+
 
 
 
@@ -108,5 +161,8 @@ if __name__ == "__main__":
     #input_from_user()
     #working_with_str()
     #working_with_str_with_function()
-    funstions_in_str()
+    #funstions_in_str()
+    #arithmetic_operations()
+    conditions()
+
 
